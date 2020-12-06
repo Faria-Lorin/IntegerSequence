@@ -2,9 +2,9 @@ import java.util.NoSuchElementException;
 public class Range implements IntegerSequence{
   private int start,end,current;
   public Range(int start, int end){
-    start = start;
+    this.start = start;
     current = start;
-    end = end;
+    this.end = end;
   }
   public void reset(){
     current = start;
@@ -22,5 +22,12 @@ public class Range implements IntegerSequence{
 
   //@throws NoSuchElementException
   public int next(){
+    int a = current;
+    int b = current + 1;
+    if (hasNext() == true){
+      current = b;
+      return a;
+    }
+    else {throw new NoSuchElementException("No More Values");}
   }
 }

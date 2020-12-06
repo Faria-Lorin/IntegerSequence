@@ -10,6 +10,8 @@ public class Range implements IntegerSequence{
     current = start;
   }
   public int length(){
+    int length = start - end + 1;
+    return length;
   }
   public boolean hasNext(){
   }

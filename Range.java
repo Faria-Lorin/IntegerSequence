@@ -14,10 +14,13 @@ public class Range implements IntegerSequence{
     return length;
   }
   public boolean hasNext(){
+    if (current <= end){
+      return true;
+    }
+    else {return false;}
   }
 
   //@throws NoSuchElementException
   public int next(){
   }
-
 }

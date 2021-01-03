@@ -9,12 +9,12 @@ public class ArraySequence implements IntegerSequence{
   }
 
   public ArraySequence(IntegerSequence otherseq){
+    otherseq.reset();
     int [] temp = new int[otherseq.length()];
     for (int i = 0; i < otherseq.length(); i++){
       temp[i] = otherseq.next();
     }
     data = temp;
-    otherseq.reset();
   }
 
   public void reset(){
